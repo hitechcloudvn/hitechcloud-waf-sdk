@@ -1,0 +1,12 @@
+{
+  "name": "@hitechcloud-vietnam/waf-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for the HiTechCloud WAF management API",
+  "main": "server.js",
+  "bin": { "hitechcloud-waf-mcp": "server.js" },
+  "scripts": { "start": "node server.js" },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

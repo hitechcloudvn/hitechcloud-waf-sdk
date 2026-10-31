@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hitechcloud-waf"
+version = "1.0.0"
+description = "Official HiTechCloud WAF management SDK for Python"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [{name = "HiTechCloud Vietnam", email = "support@hitechcloud.vn"}]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = ["requests>=2.28.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "responses>=0.23"]
+
+[project.urls]
+Homepage = "https://github.com/hitechcloud-vietnam/hitechcloud-waf-sdk"
+Repository = "https://github.com/hitechcloud-vietnam/hitechcloud-waf-sdk"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hitechcloud_waf*"]

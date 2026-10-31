@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output
+dist/
+build/
+*.egg-info/
+sdk/java/target/
+sdk/nodejs/dist/
+
+# PHP
+sdk/php/.phpunit.result.cache
+composer.lock
+
+# Lockfiles (generated)
+package-lock.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs & coverage
+*.log
+.coverage
+htmlcov/
