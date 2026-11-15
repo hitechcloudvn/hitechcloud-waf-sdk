@@ -1,12 +1,26 @@
 {
-  "name": "@hitechcloud-vietnam/waf-mcp-server",
+  "name": "@hitechcloudvn/waf-mcp-server",
   "version": "1.0.0",
   "description": "MCP server for the HiTechCloud WAF management API",
   "main": "server.js",
-  "bin": { "hitechcloud-waf-mcp": "server.js" },
-  "scripts": { "start": "node server.js" },
+  "bin": {
+    "hitechcloud-waf-mcp": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
-  }
+  },
+  "homepage": "https://developers.hitechcloud.vn/tai-lieu/waf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitechcloudvn/hitechcloud-waf-sdk.git",
+    "directory": "mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/hitechcloudvn/hitechcloud-waf-sdk/issues"
+  },
+  "author": "HiTechCloud Vietnam <support@hitechcloud.vn>"
 }

@@ -1,3 +1,3 @@
-module github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go
+module github.com/hitechcloudvn/hitechcloud-waf-sdk/go
 
 go 1.21

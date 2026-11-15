@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	waf "github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go"
+	waf "github.com/hitechcloudvn/hitechcloud-waf-sdk/go"
 )
 
 func main() {

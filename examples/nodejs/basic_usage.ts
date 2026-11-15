@@ -1,4 +1,4 @@
-import { WafClient, WafError } from "@hitechcloud-vietnam/waf-sdk";
+import { WafClient, WafError } from "@hitechcloudvn/waf-sdk";
 
 async function main() {
   const client = new WafClient({ username: "admin", password: "********" });

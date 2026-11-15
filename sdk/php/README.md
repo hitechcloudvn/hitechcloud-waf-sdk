@@ -1,7 +1,7 @@
 # HiTechCloud WAF SDK (PHP)
 
 ```bash
-composer require hitechcloud-vietnam/waf-sdk
+composer require hitechcloudvn/waf-sdk
 ```
 
 ```php

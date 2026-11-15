@@ -1,11 +1,11 @@
 # HiTechCloud WAF SDK (Node.js / TypeScript)
 
 ```bash
-npm install @hitechcloud-vietnam/waf-sdk
+npm install @hitechcloudvn/waf-sdk
 ```
 
 ```ts
-import { WafClient } from "@hitechcloud-vietnam/waf-sdk";
+import { WafClient } from "@hitechcloudvn/waf-sdk";
 
 const client = new WafClient({ username: "admin", password: "********" });
 await client.login("admin", "********"); // CSRF -> login -> JWT

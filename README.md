@@ -1,5 +1,8 @@
 # HiTechCloud WAF SDK
 
+[![CI](https://github.com/hitechcloudvn/hitechcloud-waf-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/hitechcloudvn/hitechcloud-waf-sdk/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Bộ SDK đa ngôn ngữ chính thức cho API quản trị **HiTechCloud WAF** (tường lửa ứng dụng web) — 227 endpoint, 25 nhóm tài nguyên.
 
 HiTechCloud WAF bảo vệ website khỏi SQLi, XSS, dò quét, DDoS lớp 7 và bot độc hại
@@ -14,10 +17,10 @@ tấn công, thống kê, báo cáo, cảnh báo, license...) đều mở ra qua
 
 | Ngôn ngữ | Package | Trạng thái |
 |----------|---------|------------|
-| Node.js / TypeScript | `@hitechcloud-vietnam/waf-sdk` (npm) | ✅ |
+| Node.js / TypeScript | `@hitechcloudvn/waf-sdk` (npm) | ✅ |
 | Python | `hitechcloud-waf` (PyPI) | ✅ |
-| PHP | `hitechcloud-vietnam/waf-sdk` (Composer) | ✅ |
-| Go | `github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go` | ✅ |
+| PHP | `hitechcloudvn/waf-sdk` (Composer) | ✅ |
+| Go | `github.com/hitechcloudvn/hitechcloud-waf-sdk/go` | ✅ |
 | Java | `vn.hitechcloud:waf-sdk` (Maven) | ✅ |
 
 ## Luồng xác thực
@@ -30,7 +33,7 @@ Hàm `client.login(username, password)` của mỗi SDK tự động hoá toàn 
 
 ### Node.js / TypeScript
 ```ts
-import { WafClient } from "@hitechcloud-vietnam/waf-sdk";
+import { WafClient } from "@hitechcloudvn/waf-sdk";
 const client = new WafClient({ username: "admin", password: "********" });
 await client.login("admin", "********");
 console.log(await client.sites.list());
@@ -110,4 +113,4 @@ MIT — xem [LICENSE](LICENSE).
 ## Hỗ trợ
 
 - Email: support@hitechcloud.vn
-- Issues: https://github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/issues
+- Issues: https://github.com/hitechcloudvn/hitechcloud-waf-sdk/issues

@@ -1,7 +1,7 @@
 # HiTechCloud WAF SDK (Go)
 
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go
+go get github.com/hitechcloudvn/hitechcloud-waf-sdk/go
 ```
 
 ```go
@@ -9,7 +9,7 @@ package main
 
 import (
 	"fmt"
-	waf "github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go"
+	waf "github.com/hitechcloudvn/hitechcloud-waf-sdk/go"
 )
 
 func main() {

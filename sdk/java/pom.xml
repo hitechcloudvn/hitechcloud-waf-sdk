@@ -11,7 +11,13 @@
 
     <name>HiTechCloud WAF Java SDK</name>
     <description>Official Java SDK for the HiTechCloud WAF management API</description>
-    <url>https://github.com/hitechcloud-vietnam/hitechcloud-waf-sdk</url>
+    <url>https://github.com/hitechcloudvn/hitechcloud-waf-sdk</url>
+    <scm>
+        <connection>scm:git:https://github.com/hitechcloudvn/hitechcloud-waf-sdk.git</connection>
+        <developerConnection>scm:git:https://github.com/hitechcloudvn/hitechcloud-waf-sdk.git</developerConnection>
+        <url>https://github.com/hitechcloudvn/hitechcloud-waf-sdk</url>
+    </scm>
+
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

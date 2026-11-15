@@ -12,17 +12,17 @@ pip install hitechcloud-waf
 
 ### Node.js / TypeScript
 ```bash
-npm install @hitechcloud-vietnam/waf-sdk
+npm install @hitechcloudvn/waf-sdk
 ```
 
 ### PHP
 ```bash
-composer require hitechcloud-vietnam/waf-sdk
+composer require hitechcloudvn/waf-sdk
 ```
 
 ### Go
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-waf-sdk/go
+go get github.com/hitechcloudvn/hitechcloud-waf-sdk/go
 ```
 
 ### Java (Maven)

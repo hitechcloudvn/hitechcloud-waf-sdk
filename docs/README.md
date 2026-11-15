@@ -14,4 +14,4 @@ Bộ SDK đa ngôn ngữ cho API quản trị HiTechCloud WAF (227 endpoint, 25 
 
 - [Đặc tả OpenAPI](../openapi.json)
 - Host: `https://vcwaf.hitechcloud.vn` (Sandbox: `https://vcwaf-sandbox.hitechcloud.vn`)
-- Kho mã: https://github.com/hitechcloud-vietnam/hitechcloud-waf-sdk
+- Kho mã: https://github.com/hitechcloudvn/hitechcloud-waf-sdk
