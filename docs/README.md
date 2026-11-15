@@ -1,17 +1,21 @@
-# Tài liệu HiTechCloud WAF SDK
+# HiTechCloud WAF SDK Documentation
 
-Bộ SDK đa ngôn ngữ cho API quản trị HiTechCloud WAF (227 endpoint, 25 nhóm tài nguyên).
+> **English** | [Tiếng Việt](README.vi.md)
 
-## Mục lục
+---
 
-- [Bắt đầu nhanh](getting-started.md)
-- [Xác thực](authentication.md)
-- [Tham chiếu API](api-reference.md)
-- [Xử lý lỗi](error-handling.md)
-- [Giới hạn tần suất](rate-limiting.md)
+Multi-language SDK suite for the HiTechCloud WAF administration API (227 endpoints, 25 resource groups).
 
-## Liên kết
+## Table of contents
 
-- [Đặc tả OpenAPI](../openapi.json)
+- [Quick start](getting-started.md)
+- [Authentication](authentication.md)
+- [API reference](api-reference.md)
+- [Error handling](error-handling.md)
+- [Rate limiting](rate-limiting.md)
+
+## Links
+
+- [OpenAPI specification](../openapi.json)
 - Host: `https://vcwaf.hitechcloud.vn` (Sandbox: `https://vcwaf-sandbox.hitechcloud.vn`)
-- Kho mã: https://github.com/hitechcloudvn/hitechcloud-waf-sdk
+- Repository: https://github.com/hitechcloudvn/hitechcloud-waf-sdk

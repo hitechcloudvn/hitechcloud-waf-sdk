@@ -1,15 +1,19 @@
-# Xử lý lỗi
+# Error handling
 
-SDK ánh xạ mã HTTP sang các lớp ngoại lệ chuyên biệt (kế thừa `WafError`).
+> **English** | [Tiếng Việt](error-handling.vi.md)
 
-| Mã | Ngoại lệ | Ý nghĩa |
+---
+
+The SDK maps HTTP status codes to specialized exception classes (derived from `WafError`).
+
+| Code | Exception | Meaning |
 |----|----------|---------|
-| 401 | `AuthenticationError` | Thiếu hoặc sai token |
-| 403 | `AuthorizationError` | Không đủ quyền |
-| 404 | `NotFoundError` | Không tìm thấy tài nguyên |
-| 422 | `ValidationError` | Dữ liệu gửi lên không hợp lệ |
-| 429 | `RateLimitError` | Vượt giới hạn tần suất (có `retry_after`) |
-| 5xx | `ServerError` | Lỗi phía máy chủ |
+| 401 | `AuthenticationError` | Missing or invalid token |
+| 403 | `AuthorizationError` | Insufficient permissions |
+| 404 | `NotFoundError` | Resource not found |
+| 422 | `ValidationError` | Invalid request payload |
+| 429 | `RateLimitError` | Rate limit exceeded (has `retry_after`) |
+| 5xx | `ServerError` | Server-side error |
 
 ```python
 from hitechcloud_waf import WafError, RateLimitError
@@ -17,9 +21,9 @@ from hitechcloud_waf import WafError, RateLimitError
 try:
     client.sites.list()
 except RateLimitError as e:
-    print("Thử lại sau", e.retry_after, "giây")
+    print("Retry after", e.retry_after, "seconds")
 except WafError as e:
     print(e.status_code, e.message, e.data)
 ```
 
-Thông điệp lỗi được lấy từ trường `msg` (hoặc `err`) trong phản hồi API.
+Error messages are taken from the `msg` (or `err`) field of the API response.

@@ -1,5 +1,9 @@
 # HiTechCloud WAF SDK (Python)
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 Official Python SDK for the HiTechCloud WAF management API.
 
 ```bash

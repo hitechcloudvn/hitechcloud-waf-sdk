@@ -1,5 +1,9 @@
 # HiTechCloud WAF SDK (PHP)
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 ```bash
 composer require hitechcloudvn/waf-sdk
 ```

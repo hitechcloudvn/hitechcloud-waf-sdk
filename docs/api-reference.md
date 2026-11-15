@@ -1,9 +1,13 @@
-# Tham chiếu API
+# API reference
 
-SDK tổ chức 227 endpoint thành 25 nhóm tài nguyên. Mỗi nhóm là một thuộc
-tính trên `client` (ví dụ `client.sites`, `client.policies`).
+> **English** | [Tiếng Việt](api-reference.vi.md)
 
-| Nhóm | Số endpoint | Truy cập |
+---
+
+The SDK organizes 227 endpoints into 25 resource groups. Each group is a property on `client`
+(for example `client.sites`, `client.policies`).
+
+| Group | Endpoints | Access |
 |------|-------------|----------|
 | Authentication & Token | 7 | `client.auth` |
 | Users & Account | 7 | `client.users` |
@@ -31,20 +35,20 @@ tính trên `client` (ví dụ `client.sites`, `client.policies`).
 | License & Authorization | 7 | `client.license` |
 | MCP | 2 | `client.mcp` |
 
-## Quy ước phương thức
+## Method conventions
 
-- `GET` -> nhận tham số truy vấn tuỳ chọn (`params` / `Map` / `array`).
-- `POST` / `PUT` / `DELETE` -> nhận body (`data`).
-- Tham số đường dẫn (`{id}`, `{rule_id}`, ...) là tham số vị trí đầu tiên.
+- `GET` -> accepts optional query parameters (`params` / `Map` / `array`).
+- `POST` / `PUT` / `DELETE` -> accepts a body (`data`).
+- Path parameters (`{id}`, `{rule_id}`, ...) are the first positional parameters.
 
-## Định dạng phản hồi
+## Response format
 
-Mọi endpoint trả về cấu trúc JSON thống nhất:
+Every endpoint returns a uniform JSON structure:
 
 ```json
 { "data": {}, "err": "", "msg": "ok" }
 ```
 
-Luôn kiểm tra `err` trước khi đọc `data`. SDK tự động ném ngoại lệ khi HTTP >= 400.
+Always check `err` before reading `data`. The SDK throws an exception automatically when HTTP >= 400.
 
-Xem đầy đủ tham số từng endpoint trong [openapi.json](../openapi.json).
+See the full parameters of every endpoint in [openapi.json](../openapi.json).

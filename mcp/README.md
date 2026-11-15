@@ -1,5 +1,9 @@
 # HiTechCloud WAF MCP Server
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 A [Model Context Protocol](https://modelcontextprotocol.io) server that exposes
 core HiTechCloud WAF management actions to AI agents.
 

@@ -1,9 +1,13 @@
-# Bắt đầu nhanh
+# Quick start
 
-HiTechCloud WAF là tường lửa ứng dụng web (WAF). SDK này bọc toàn bộ API quản trị
-tại `https://vcwaf.hitechcloud.vn/api` theo hướng đối tượng, nhóm theo tài nguyên.
+> **English** | [Tiếng Việt](getting-started.vi.md)
 
-## Cài đặt
+---
+
+HiTechCloud WAF is a web application firewall (WAF). This SDK wraps the entire administration
+API at `https://vcwaf.hitechcloud.vn/api` in an object-oriented way, grouped by resource.
+
+## Installation
 
 ### Python
 ```bash
@@ -34,7 +38,7 @@ go get github.com/hitechcloudvn/hitechcloud-waf-sdk/go
 </dependency>
 ```
 
-## Gọi API đầu tiên
+## Making your first API call
 
 ```python
 from hitechcloud_waf import WafClient
@@ -43,11 +47,11 @@ client = WafClient(username="admin", password="********")  # CSRF -> login -> JW
 print(client.sites.list())
 ```
 
-Dùng môi trường thử nghiệm bằng `WafClient(sandbox=True, ...)` để trỏ tới `https://vcwaf-sandbox.hitechcloud.vn`.
+Use the sandbox environment with `WafClient(sandbox=True, ...)` to target `https://vcwaf-sandbox.hitechcloud.vn`.
 
-## Môi trường
+## Environments
 
-| Môi trường | Base URL |
+| Environment | Base URL |
 |------------|----------|
 | Production | `https://vcwaf.hitechcloud.vn/api` |
 | Sandbox | `https://vcwaf-sandbox.hitechcloud.vn/api` |

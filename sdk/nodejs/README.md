@@ -1,5 +1,9 @@
 # HiTechCloud WAF SDK (Node.js / TypeScript)
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 ```bash
 npm install @hitechcloudvn/waf-sdk
 ```

@@ -1,21 +1,25 @@
-# Giới hạn tần suất & Phân trang
+# Rate limiting & pagination
 
-## Phân trang
+> **English** | [Tiếng Việt](rate-limiting.vi.md)
 
-Các endpoint danh sách hỗ trợ tham số truy vấn:
+---
 
-| Tham số | Kiểu | Mô tả |
+## Pagination
+
+List endpoints support the following query parameters:
+
+| Parameter | Type | Description |
 |---------|------|-------|
-| `page` | integer | Số trang, bắt đầu từ 1 |
-| `page_size` | integer | Số bản ghi mỗi trang |
-| `keyword` | string | Từ khoá tìm kiếm (nếu hỗ trợ) |
+| `page` | integer | Page number, starting from 1 |
+| `page_size` | integer | Records per page |
+| `keyword` | string | Search keyword (where supported) |
 
-## Giới hạn tần suất
+## Rate limiting
 
-Khi vượt ngưỡng, API trả về HTTP `429` kèm header `Retry-After`. SDK tự động thử lại
-(theo cấp số nhân cho 5xx, theo `Retry-After` cho 429) tới số lần cấu hình
-(`max_retries`, mặc định 3). Khi vẫn thất bại, SDK ném `RateLimitError` với thuộc
-tính `retry_after`.
+When a threshold is exceeded, the API returns HTTP `429` with a `Retry-After` header. The SDK
+retries automatically (exponential backoff for 5xx, honoring `Retry-After` for 429) up to the
+configured number of attempts (`max_retries`, default 3). If it still fails, the SDK throws
+`RateLimitError` with a `retry_after` attribute.
 
 ```python
 client = WafClient(username="admin", password="********", max_retries=5)

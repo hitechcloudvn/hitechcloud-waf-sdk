@@ -1,5 +1,9 @@
 # HiTechCloud WAF SDK (Go)
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 ```bash
 go get github.com/hitechcloudvn/hitechcloud-waf-sdk/go
 ```

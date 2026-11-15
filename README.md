@@ -1,21 +1,25 @@
 # HiTechCloud WAF SDK
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 [![CI](https://github.com/hitechcloudvn/hitechcloud-waf-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/hitechcloudvn/hitechcloud-waf-sdk/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> Bộ SDK đa ngôn ngữ chính thức cho API quản trị **HiTechCloud WAF** (tường lửa ứng dụng web) — 227 endpoint, 25 nhóm tài nguyên.
+> The official multi-language SDK suite for the **HiTechCloud WAF** administration API (web application firewall) — 227 endpoints, 25 resource groups.
 
-HiTechCloud WAF bảo vệ website khỏi SQLi, XSS, dò quét, DDoS lớp 7 và bot độc hại
-qua mô hình reverse proxy. Toàn bộ năng lực quản trị (site, policy, Skynet AI,
-chống giả mạo, ACL/rate-limit, challenge, waiting-room, JA4, chống bot, SSL, sự kiện
-tấn công, thống kê, báo cáo, cảnh báo, license...) đều mở ra qua REST API.
+HiTechCloud WAF protects websites from SQLi, XSS, scanning, layer-7 DDoS and malicious bots
+through a reverse-proxy model. The entire administration surface (sites, policies, Skynet AI,
+anti-tamper, ACL/rate-limit, challenges, waiting room, JA4, anti-bot, SSL, attack events,
+statistics, reports, alarms, licensing and more) is exposed through a REST API.
 
 - Host: `https://vcwaf.hitechcloud.vn` · Base: `/api` · Sandbox: `https://vcwaf-sandbox.hitechcloud.vn`
-- Tài liệu: https://developers.hitechcloud.vn
+- Documentation: https://developers.hitechcloud.vn
 
-## Ngôn ngữ hỗ trợ
+## Supported languages
 
-| Ngôn ngữ | Package | Trạng thái |
+| Language | Package | Status |
 |----------|---------|------------|
 | Node.js / TypeScript | `@hitechcloudvn/waf-sdk` (npm) | ✅ |
 | Python | `hitechcloud-waf` (PyPI) | ✅ |
@@ -23,13 +27,13 @@ tấn công, thống kê, báo cáo, cảnh báo, license...) đều mở ra qua
 | Go | `github.com/hitechcloudvn/hitechcloud-waf-sdk/go` | ✅ |
 | Java | `vn.hitechcloud:waf-sdk` (Maven) | ✅ |
 
-## Luồng xác thực
+## Authentication flow
 
-`GET /api/open/auth/csrf` → `POST /api/open/auth/login` (nhận `jwt`) → (tuỳ chọn) `POST /api/open/auth/tfa` → gửi `Authorization: Bearer <jwt>`.
+`GET /api/open/auth/csrf` → `POST /api/open/auth/login` (returns `jwt`) → (optional) `POST /api/open/auth/tfa` → send `Authorization: Bearer <jwt>`.
 
-Hàm `client.login(username, password)` của mỗi SDK tự động hoá toàn bộ luồng này.
+Each SDK's `client.login(username, password)` helper automates this whole flow.
 
-## Bắt đầu nhanh
+## Quick start
 
 ### Node.js / TypeScript
 ```ts
@@ -66,9 +70,9 @@ client.login("admin", "********", null);
 client.sites().list(null);
 ```
 
-## Nhóm tài nguyên
+## Resource groups
 
-| Nhóm | Số endpoint | Mô tả |
+| Group | Endpoints | Description |
 |------|-------------|-------|
 | Authentication & Token | 7 | CSRF, login, TFA, logout and API token lifecycle |
 | Users & Account | 7 | Manage administrative users, TOTP and the current manager profile |
@@ -96,21 +100,21 @@ client.sites().list(null);
 | License & Authorization | 7 | Authorization records and license status / lifecycle |
 | MCP | 2 | Model Context Protocol bridge endpoints |
 
-## Cấu trúc kho
+## Repository layout
 
 ```
-sdk/        # 5 SDK: nodejs (TS), python, php, go, java
-docs/       # Tài liệu tiếng Việt
-examples/   # Ví dụ cho từng ngôn ngữ
-mcp/        # MCP server (Node) cho AI agent
+sdk/        # 5 SDKs: nodejs (TS), python, php, go, java
+docs/       # Vietnamese documentation
+examples/   # Examples for each language
+mcp/        # MCP server (Node) for AI agents
 openapi.json
 ```
 
-## Giấy phép
+## License
 
-MIT — xem [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
 
-## Hỗ trợ
+## Support
 
 - Email: support@hitechcloud.vn
 - Issues: https://github.com/hitechcloudvn/hitechcloud-waf-sdk/issues

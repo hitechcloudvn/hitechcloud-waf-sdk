@@ -1,21 +1,25 @@
-# Xác thực
+# Authentication
 
-WAF dùng xác thực dựa trên JWT. Luồng chuẩn gồm ba bước (SDK tự động hoá trong
-`client.login(...)`):
+> **English** | [Tiếng Việt](authentication.vi.md)
 
-| Bước | Endpoint | Mô tả |
+---
+
+WAF uses JWT-based authentication. The standard flow has three steps (the SDK automates them
+in `client.login(...)`):
+
+| Step | Endpoint | Description |
 |------|----------|-------|
-| 1. CSRF | `GET /api/open/auth/csrf` | Lấy `csrf_token` |
-| 2. Đăng nhập | `POST /api/open/auth/login` | Gửi `username`, `password`, `csrf_token`; nhận `jwt` |
-| 3. TFA (nếu bật) | `POST /api/open/auth/tfa` | Xác thực mã OTP 2 lớp |
-| Token API | `GET/PUT/DELETE /api/open/auth/token` | Lấy / xoay / thu hồi token |
-| Đăng xuất | `POST /api/open/auth/logout` | Kết thúc phiên |
+| 1. CSRF | `GET /api/open/auth/csrf` | Obtain `csrf_token` |
+| 2. Login | `POST /api/open/auth/login` | Send `username`, `password`, `csrf_token`; receive `jwt` |
+| 3. TFA (if enabled) | `POST /api/open/auth/tfa` | Verify the second-factor OTP code |
+| API token | `GET/PUT/DELETE /api/open/auth/token` | Obtain / rotate / revoke tokens |
+| Logout | `POST /api/open/auth/logout` | End the session |
 
-Sau khi có token, mọi lời gọi gửi header `Authorization: Bearer <jwt>`.
+Once you have a token, every call sends the `Authorization: Bearer <jwt>` header.
 
 ```python
 client = WafClient(username="admin", password="********", tfa_code="123456")
-# hoặc dùng token có sẵn:
+# or use an existing token:
 client = WafClient(token="EXISTING_JWT")
 ```
 
@@ -27,5 +31,6 @@ curl -X POST "https://vcwaf.hitechcloud.vn/api/open/auth/login" \
 curl "https://vcwaf.hitechcloud.vn/api/open/site" -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
-> Token API có toàn quyền quản trị WAF. Lưu an toàn, luân chuyển định kỳ, thu hồi
-> ngay khi nghi ngờ lộ. Không nhúng token vào mã frontend.
+> API tokens carry full WAF administration privileges. Store them safely, rotate them
+> periodically and revoke them immediately if you suspect a leak. Never embed tokens
+> in frontend code.

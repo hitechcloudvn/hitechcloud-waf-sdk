@@ -1,5 +1,9 @@
 # HiTechCloud WAF SDK (Java)
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 ```xml
 <dependency>
     <groupId>vn.hitechcloud</groupId>
