@@ -33,7 +33,7 @@ public class WafClient {
     private final Portal portal;
     private final AntiBot antiBot;
     private final Settings settings;
-    private final System system;
+    private final vn.hitechcloud.waf.resources.System system;
     private final License license;
     private final Mcp mcp;
 
@@ -68,7 +68,7 @@ public class WafClient {
         this.portal = new Portal(httpClient);
         this.antiBot = new AntiBot(httpClient);
         this.settings = new Settings(httpClient);
-        this.system = new System(httpClient);
+        this.system = new vn.hitechcloud.waf.resources.System(httpClient);
         this.license = new License(httpClient);
         this.mcp = new Mcp(httpClient);
     }
@@ -144,7 +144,7 @@ public class WafClient {
     public Portal portal() { return portal; }
     public AntiBot antiBot() { return antiBot; }
     public Settings settings() { return settings; }
-    public System system() { return system; }
+    public vn.hitechcloud.waf.resources.System system() { return system; }
     public License license() { return license; }
     public Mcp mcp() { return mcp; }
 }

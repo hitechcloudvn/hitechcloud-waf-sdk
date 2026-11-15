@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "prepare": "tsc",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "test": "node --test test/"
   },
   "keywords": [
     "hitechcloud",
