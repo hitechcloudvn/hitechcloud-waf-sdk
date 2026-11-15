@@ -19,6 +19,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - PHP SDK: add `phpunit.xml.dist` and smoke tests so `vendor/bin/phpunit`
   runs the suite instead of printing help and failing the test job.
 
+- Node.js SDK: run the built-in test runner as `node --test` without a path
+  argument so the same command works on Node.js 18, 20 and 22.
+- Python SDK: add pytest smoke tests so `pytest` collects a real suite (an
+  empty suite exits with code 5 and fails the test job).
+
 ## [1.0.0] - 2026-11-01
 
 ### Added

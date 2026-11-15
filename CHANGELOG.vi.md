@@ -19,6 +19,11 @@ và dự án tuân theo [Semantic Versioning](https://semver.org/).
 - SDK PHP: thêm `phpunit.xml.dist` và smoke test để `vendor/bin/phpunit`
   chạy bộ test thay vì in help và fail job test.
 
+- SDK Node.js: chạy test runner tích hợp bằng `node --test` không kèm đối số
+  đường dẫn để cùng một lệnh chạy được trên Node.js 18, 20 và 22.
+- SDK Python: thêm smoke test pytest để `pytest` có bộ test thật (bộ test rỗng
+  thoát mã 5 và fail job test).
+
 ## [1.0.0] - 2026-11-01
 
 ### Thêm
